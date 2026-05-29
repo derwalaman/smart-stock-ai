@@ -1,0 +1,52 @@
+version: "3.9"
+
+services:
+
+  postgres:
+
+    image: postgres:15
+
+    container_name: smartstock-postgres
+
+    restart: always
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: smartstock
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+
+    build: ./backend
+
+    container_name: smartstock-backend
+
+    ports:
+      - "8000:8000"
+
+    env_file:
+      - ./backend/.env
+
+    depends_on:
+      - postgres
+
+  frontend:
+
+    build: ./frontend
+
+    container_name: smartstock-frontend
+
+    ports:
+      - "5173:5173"
+
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:

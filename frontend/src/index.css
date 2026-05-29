@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #09090b;
+  --card: rgba(24, 24, 27, 0.7);
+  --border: rgba(255,255,255,0.08);
+  --text: #fafafa;
+  --muted: #a1a1aa;
+}
+
+body {
+  background: radial-gradient(
+    circle at top,
+    #18181b,
+    #09090b 60%
+  );
+
+  color: var(--text);
+
+  min-height: 100vh;
+
+  font-family: Inter, sans-serif;
+}
+
+html.dark {
+    background: #09090b;
+}
+
+html.light {
+    background: #f4f7fb;
+}
+
+html {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}

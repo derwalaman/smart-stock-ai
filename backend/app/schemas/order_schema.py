@@ -1,0 +1,14 @@
+# app/schemas/order_schema.py
+
+from pydantic import BaseModel
+from typing import List
+
+
+class OrderItemCreate(BaseModel):
+    product_id: int
+    quantity: int
+
+
+class OrderCreate(BaseModel):
+    customer_id: int
+    items: List[OrderItemCreate]
