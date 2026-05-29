@@ -27,8 +27,8 @@ const Settings = () => {
 
     const [profile, setProfile] =
         useState({
-            name: "Aman Derwal",
-            email: "aman@example.com",
+            name: "Ankit Dabad",
+            email: "ankitdabad01@google.com",
             company: "SmartStock AI",
             role: "Administrator",
         });
