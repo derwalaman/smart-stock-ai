@@ -43,7 +43,7 @@ https://smartstock-api-ckdo.onrender.com
 ## Swagger API Docs
 
 ```bash
-https://smartstock-api-ckdo.onrender.com/docs![alt text](image.png)
+https://smartstock-api-ckdo.onrender.com/docs
 ```
 
 ---
